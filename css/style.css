@@ -127,11 +127,16 @@ hr.style-one {
     text-transform: uppercase;
 }
 
+.block-title__title.subtitle{
+  font-size: 32px;
+}
+
 .block-title__text {
     margin: 0;
     font-size: 17px;
     color: #455360;
-    line-height: 26px;
+    line-height: 30px;
+    text-align: justify;
 }
 
 .block-title__title+.block-title__text {
@@ -2544,7 +2549,7 @@ hr.style-one {
 }
 
 .about-five {
-    padding: 255px 0;
+    padding: 150px 0;
 }
 
 @media (max-width: 991px) {
@@ -2565,7 +2570,9 @@ hr.style-one {
     right: 0;
     width: 100%;
     max-width: 500px;
+    padding-left: 30px;
 }
+
 
 @media (max-width: 991px) {
     .about-five__image-block {
@@ -2574,6 +2581,7 @@ hr.style-one {
         -webkit-transform: translateY(0%);
         transform: translateY(0%);
         margin-bottom: 70px;
+        padding-left: 0px;
     }
 }
 
@@ -2594,7 +2602,7 @@ hr.style-one {
 }
 
 .about-six {
-    padding: 255px 0;
+    padding: 140px 0;
     padding-top: 0;
 }
 
