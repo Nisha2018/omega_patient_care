@@ -723,7 +723,7 @@ hr.style-one {
 }
 
 .header-one__dental-one .header-navigation .main-navigation {
-    float: none;
+    float: right;
     text-align: center;
 }
 
@@ -2087,10 +2087,21 @@ hr.style-one {
 }
 
 .service-one__content .link:after {
-    top: 35px;
+    top: 15px;
     left: 90px;
     color: #86bd24;
 }
+
+.clients-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 60px;
+    padding: 0 90px;
+}
+
+/*.services-row{
+  padding: 0 30px;
+}*/
 
 .about-one__features-item+.about-one__features-item {
     margin-top: 15px;
@@ -2654,7 +2665,8 @@ hr.style-one {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    margin-bottom: 110px;
+    margin-bottom: 100px;
+    padding: 0 40px;
 }
 
 .service-one__icon {
@@ -2688,13 +2700,12 @@ hr.style-one {
 
 .service-one__content .link {
     color: #86bd24;
-    padding-top: 20px;
     display: block;
     position: relative;
 }
 
-.service-one__content .link:hover{
-  color: #0384CE;
+.service-one__content .link:hover {
+    color: #0384CE;
 }
 
 .service-one__title {
@@ -5975,6 +5986,7 @@ hr.style-one {
     font-size: 15px;
     color: #fff;
     text-align: center;
+    opacity: 0.5;
 }
 
 .footer-one__bottom-links {
