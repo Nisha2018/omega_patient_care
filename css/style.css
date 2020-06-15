@@ -2709,6 +2709,10 @@ hr.style-one {
     align-items: center;
 }
 
+/*.service-one__icon img {
+    filter: invert(31%) sepia(98%) saturate(2335%) hue-rotate(182deg) brightness(95%) contrast(98%);
+}*/
+
 .service-one__icon i {
     font-size: 60px;
     color: #0384CE;
