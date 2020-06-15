@@ -22,8 +22,8 @@
 * 2. common style
 */
 
-html{
-  scroll-behavior: smooth;
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -132,8 +132,9 @@ hr.style-one {
     text-transform: uppercase;
 }
 
-.block-title__title.subtitle, .appointment-two__title.subtitle{
-  font-size: 32px;
+.block-title__title.subtitle,
+.appointment-two__title.subtitle {
+    font-size: 32px;
 }
 
 .block-title__text {
@@ -1747,7 +1748,8 @@ hr.style-one {
     background-color: #F7F7F7;
 }
 
-.appointment-two__form-field .bootstrap-select>.dropdown-toggle:after {
+.appointment-two__form-field .bootstrap-select>.dropdown-toggle:after,
+.dropdown-arrow:after {
     border: none;
     content: 'keyboard_arrow_down';
     font-family: 'Material Icons';
@@ -1755,6 +1757,15 @@ hr.style-one {
     margin: 0;
     color: #0f4469;
     opacity: .7;
+}
+
+.dropdown-arrow {
+    position: relative;
+}
+
+.dropdown-arrow:after {
+    top: 0px;
+    position: absolute;
 }
 
 .appointment-two__form-field+.appointment-two__form-field {
@@ -1851,7 +1862,8 @@ hr.style-one {
     position: relative;
 }
 
-.appointment-two__about-one .appointment-two__feature-icon i,.appointment-two__feature-icon i {
+.appointment-two__about-one .appointment-two__feature-icon i,
+.appointment-two__feature-icon i {
     display: inline-block;
     vertical-align: middle;
     width: 20px;
@@ -3816,7 +3828,7 @@ hr.style-one {
 }
 
 .feature-four__list-item+.feature-four__list-item {
-    margin-top: 35px;
+    margin-top: 15px;
 }
 
 .dental-feature {
@@ -6275,6 +6287,7 @@ hr.style-one {
 
 .contact-one__info__text span {
     color: #0f4469;
+    font-weight: 600;
 }
 
 .contact-one__info__text+.contact-one__info__text {

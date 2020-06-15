@@ -10,6 +10,65 @@
         margin-bottom: 0;
     }
 
+    .header-navigation ul.navigation-box>li>.submenu>li>a {
+        color: #0f4469;
+        letter-spacing: 1.5px;
+    }
+
+    .header-navigation ul.navigation-box>li>.submenu {
+        background-color: #fff;
+    }
+
+    .static-banner-two__title {
+        font-size: 30px;
+        letter-spacing: 1.5px;
+        line-height: 50px;
+        text-align: center;
+    }
+
+    .static-banner-two__content {
+        display: grid;
+        justify-items: center;
+    }
+
+    .dental-feature,
+    .feature-four,
+    .team-two {
+        padding: 80px 0;
+    }
+
+    .service-one {
+        padding-top: 80px;
+        padding-bottom: 0;
+    }
+
+    .service-one__single {
+        display: grid;
+    }
+
+    .service-one__icon {
+        border-right: 0px solid rgba(0, 0, 0, 0.1);
+        text-align: center;
+        margin: auto;
+    }
+
+    .service-one__content {
+        grid-template-rows: 1fr 4fr 1fr;
+    }
+
+    .contact-one__form {
+        padding-bottom: 50px;
+    }
+
+    .appointment-two,
+    .about-four {
+        padding: 50px 0;
+    }
+
+    .history-one__single+.history-one__single {
+        margin-top: 30px;
+    }
+
     .logo-box {
         width: 100%;
         float: none;
@@ -131,6 +190,7 @@
         transform: translateX(0);
         -webkit-box-shadow: none !important;
         box-shadow: none !important;
+        background: #fff;
     }
 
     .header-navigation .navigation-box>li>.submenu>li>a::after {
@@ -164,7 +224,7 @@
     .header-navigation ul.navigation-box li a .sub-nav-toggler {
         background-color: transparent;
         background-image: none;
-        border: 1px solid #FFC000;
+        border: 1px solid #86bd24;
         border-radius: 4px;
         padding: 9px 9px;
         position: absolute;
@@ -181,7 +241,7 @@
     }
 
     .header-navigation .navigation-box .sub-nav-toggler .icon-bar {
-        background-color: #FFC000;
+        background-color: #86bd24;
         border-radius: 1px;
         display: block;
         height: 1px;
@@ -214,7 +274,6 @@
         -o-transform: translateY(0);
         transform: translateY(0);
         float: none;
-        padding-right: 145px;
     }
 
     .header-navigation .container .logo-box .navbar-brand {
@@ -230,6 +289,7 @@
         display: block;
         margin: 0 !important;
         width: 100%;
+        background: #fff;
     }
 
     .header-navigation ul.navigation-box>li {
@@ -272,13 +332,6 @@
         background-color: transparent;
     }
 
-    .header-navigation .container .menu-toggler {
-        float: left;
-        margin: 23px 0;
-        color: #111111;
-    }
-
-
     .header-navigation {
         padding-left: 0px !important;
         padding-right: 0px !important;
@@ -288,12 +341,10 @@
         padding-right: 0;
     }
 
-    .header-one .header-navigation .container .menu-toggler {
-        float: right;
-    }
-
     .header-one .header-navigation .container .logo-box {
-        padding-right: 105px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
     }
 
     .header-two .header-navigation .container .right-side-box {
@@ -330,7 +381,8 @@
 
     .header-one__dental-one .header-navigation .container .menu-toggler {
         float: left;
-        color: #fff;
+        color: #0f4469;
+        position: relative;
     }
 
     .header-one__dental-one .header-navigation .container .right-side-box {
@@ -726,9 +778,24 @@
     }
 }
 
+@media (min-width: 767px) {
+    .header-one__dental-one .header-navigation .container .menu-toggler {
+        float: right;
+        left: 110px;
+    }
+}
+
 @media(max-width: 767px) {
     .topbar-one .container {
         flex-direction: column;
+    }
+
+    .topbar-three {
+        display: none;
+    }
+
+    .clients-row {
+        grid-template-columns: 1fr;
     }
 
     .topbar-one__contact-item:not(:last-child):after {
