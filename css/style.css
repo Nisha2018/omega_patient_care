@@ -4055,11 +4055,11 @@ hr.style-one {
 
 @media (max-width: 1440px) {
     .video-two__box {
-        right: 0%;
+        /*right: 0%;*/
         -webkit-transform-origin: center center;
         transform-origin: center center;
-        -webkit-transform: translateY(-50%) scale(0.75);
-        transform: translateY(-50%) scale(0.75);
+        /*-webkit-transform: translateY(-50%) scale(0.8);*/
+        /*transform: translateY(-50%) scale(0.8);*/
     }
 }
 
@@ -6049,11 +6049,17 @@ hr.style-one {
 * 13. inner-banner style
 */
 .inner-banner {
-    background-position: center center;
+    background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
-    padding: 235px 0;
+    padding: 180px 0;
+}
+
+.inner-banner:before{
+    background-color: #0f4469;
+    opacity: .7;
+    z-index: 9;
 }
 
 .inner-banner__title {
