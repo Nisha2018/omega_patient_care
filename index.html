@@ -83,20 +83,24 @@
                             </div><!-- /.appointment-two__form-top -->
                             <div class="appointment-two__form-bottom">
                                 <div class="appointment-two__form-field">
-                                    <input type="text" name="name" placeholder="Enter your name">
+                                    <input type="text" name="name" placeholder="Enter your name*" required="true">
                                     <i class="appointment-two__form-field-icon material-icons">person</i>
                                 </div><!-- /.appointment-two__form-field -->
                                 <div class="appointment-two__form-field">
-                                    <input type="text" name="name" placeholder="Enter your phone">
+                                    <input type="text" pattern="[0-9]{10}$" title="Please  enter a  10 digit number" name="number" placeholder="Enter your mobile number*" required="true">
                                     <i class="appointment-two__form-field-icon material-icons">phone</i>
                                 </div><!-- /.appointment-two__form-field -->
                                 <div class="appointment-two__form-field">
-                                    <select class="selectpicker">
-                                        <option>Choose Service</option>
-                                        <option>Nursing Services</option>
-                                        <option>Physiotherapy</option>
-                                        <option>Diabetes Test</option>
-                                        <option>Lab Test</option>
+                                    <input type="email" name="email" placeholder="Enter your Email*" required="true">
+                                    <i class="appointment-two__form-field-icon material-icons">mail</i>
+                                </div>
+                                <div class="appointment-two__form-field">
+                                    <select class="selectpicker" required="true" name="Service">
+                                        <option value="">Choose Service</option>
+                                        <option value="Nursing Services">Nursing Services</option>
+                                        <option value="Physiotherapy">Physiotherapy</option>
+                                        <option value="Diabetes Test">Diabetes Test</option>
+                                        <option value="Lab Test">Lab Test</option>
                                     </select>
                                 </div><!-- /.appointment-two__form-field -->
                                 <div class="appointment-two__form-field">
@@ -271,7 +275,7 @@
             <div class="container">
                 <div class="block-title text-center">
                     <h2 class="block-title__title">Our Clients</h2><!-- /.block-title__title -->
-                    <p class="block-title__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt uttom <br> labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p><!-- /.block-title__text -->
+                    
                 </div><!-- /.block-title -->
                 <div class="row clients-row">
                     <div>
