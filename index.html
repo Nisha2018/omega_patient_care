@@ -24,7 +24,7 @@
                     <p class="topbar-three__text">Welcome to <span>Omega </span> Patient Care</p>
                 </div><!-- /.topbar-three__left -->
                 <div class="topbar-three__right">
-                    <a href="mailto:help@example.com" class="topbar-three__link"><i class="material-icons">email</i>help@example.com</a>
+                    <a href="mailto:support@omegapatientcare.com" class="topbar-three__link"><i class="material-icons">email</i>support@omegapatientcare.com</a>
                     <a href="callto:+91 9711432859" class="topbar-three__link"><i class="material-icons">local_phone</i>+91 9711432859</a>
                 </div><!-- /.topbar-three__right -->
             </div><!-- /.container -->
@@ -77,32 +77,41 @@
                         </div><!-- /.static-banner-two__content -->
                     </div><!-- /.col-lg-6 -->
                     <div class="col-lg-5">
-                        <form action="#" class="appointment-two__form contact-from-validated">
+                        <script type="text/javascript">
+                        var submitted = false;
+                        </script>
+                        <!--Update the URL for thank you page on form submit -->
+                        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='http://www.omegapatientcare.com/';}"></iframe>
+                        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSerqPrc9mY8eBBJPhxQzDXp1n5cSyMG9RyuLcQvML64sBlyYQ/formResponse" method="post" target="hidden_iframe" onsubmit="return validateForm();" class="appointment-two__form contact-from-validated">
                             <div class="appointment-two__form-top">
-                                <h3 class="appointment-two__form-title">Get an Appointment</h3><!-- /.appointment-two__form-title -->
-                            </div><!-- /.appointment-two__form-top -->
+                                <h3 class="appointment-two__form-title">Get an Appointment</h3>
+                            </div>
                             <div class="appointment-two__form-bottom">
+                                <div class="form-message"></div>
                                 <div class="appointment-two__form-field">
-                                    <input type="text" name="name" placeholder="Enter your name*" required="true">
+                                    <input type="text" name="entry.143189773" id="name" placeholder="Enter your name*" required="true">
                                     <i class="appointment-two__form-field-icon material-icons">person</i>
-                                </div><!-- /.appointment-two__form-field -->
+                                </div>
+                                <div class="message"></div>
                                 <div class="appointment-two__form-field">
-                                    <input type="text" pattern="[0-9]{10}$" title="Please  enter a  10 digit number" name="number" placeholder="Enter your mobile number*" required="true">
+                                    <input type="text" id="phone" pattern="[0-9]{10}$" title="Please  enter a  10 digit number" name="entry.207768463" placeholder="Enter your mobile number*" required="true">
                                     <i class="appointment-two__form-field-icon material-icons">phone</i>
-                                </div><!-- /.appointment-two__form-field -->
+                                </div>
+                                <div class="message"></div>
                                 <div class="appointment-two__form-field">
-                                    <input type="email" name="email" placeholder="Enter your Email*" required="true">
+                                    <input type="email" id="email" name="entry.1668228412" placeholder="Enter your Email*" required="true">
                                     <i class="appointment-two__form-field-icon material-icons">mail</i>
                                 </div>
+                                <div class="message"></div>
                                 <div class="appointment-two__form-field">
-                                    <select class="selectpicker" required="true" name="Service">
-                                        <option value="">Choose Service</option>
+                                    <select class="selectpicker" required="true" id="service" name="entry.1573170665">
+                                        <option value="" disabled selected>Choose Service</option>
                                         <option value="Nursing Services">Nursing Services</option>
                                         <option value="Physiotherapy">Physiotherapy</option>
                                         <option value="Diabetes Test">Diabetes Test</option>
                                         <option value="Lab Test">Lab Test</option>
                                     </select>
-                                </div><!-- /.appointment-two__form-field -->
+                                </div>
                                 <div class="appointment-two__form-field">
                                     <button type="submit" class="appointment-two__form-btn">Request Appointment</button>
                                 </div><!-- /.appointment-two__form-field -->
@@ -202,7 +211,6 @@
                             </div><!-- /.service-one__content -->
                         </div><!-- /.service-one__single -->
                     </div><!-- /.col-lg-4 -->
-                    
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <div class="service-one__single wow fadeInLeft" data-wow-duration="1s">
                             <div class="service-one__icon">
@@ -237,31 +245,31 @@
                             </div><!-- /.feature-four__list-item -->
                             <div class="feature-four__list-item">
                                 <i class="fa fa-check-circle feature-four__list-icon"></i>
-                                We ensure omega’s patients will get ample services at a feasible  price.  
+                                We ensure omega’s patients will get ample services at a feasible price.
                             </div><!-- /.feature-four__list-item -->
                             <div class="feature-four__list-item">
                                 <i class="fa fa-check-circle feature-four__list-icon"></i>
-                                Our belief to understand the patient pain and patient 1st.  
+                                Our belief to understand the patient pain and patient 1st.
                             </div><!-- /.feature-four__list-item -->
                             <div class="feature-four__list-item">
                                 <i class="fa fa-check-circle feature-four__list-icon"></i>
-                                We don’t compromise with quality and care. 
+                                We don’t compromise with quality and care.
                             </div><!-- /.feature-four__list-item -->
                             <div class="feature-four__list-item">
                                 <i class="fa fa-check-circle feature-four__list-icon"></i>
-                                 We guarantee 100% hygiene.  
+                                We guarantee 100% hygiene.
                             </div><!-- /.feature-four__list-item -->
                             <div class="feature-four__list-item">
                                 <i class="fa fa-check-circle feature-four__list-icon"></i>
-                                We keep patients happy and healthy.  
+                                We keep patients happy and healthy.
                             </div><!-- /.feature-four__list-item -->
                             <div class="feature-four__list-item">
                                 <i class="fa fa-check-circle feature-four__list-icon"></i>
-                                We treat patients like a family.  
+                                We treat patients like a family.
                             </div><!-- /.feature-four__list-item -->
                             <div class="feature-four__list-item">
                                 <i class="fa fa-check-circle feature-four__list-icon"></i>
-                                We never give-up on a patient's problem.  
+                                We never give-up on a patient's problem.
                             </div><!-- /.feature-four__list-item -->
                         </div><!-- /.feature-four__list -->
                     </div><!-- /.col-lg-7 -->
@@ -275,7 +283,6 @@
             <div class="container">
                 <div class="block-title text-center">
                     <h2 class="block-title__title">Our Clients</h2><!-- /.block-title__title -->
-                    
                 </div><!-- /.block-title -->
                 <div class="row clients-row">
                     <div>
@@ -305,7 +312,7 @@
         <footer class="footer-one">
             <div class="footer-one__bottom">
                 <div class="container">
-                    <p class="footer-one__copy-text">&copy; 2020 Omega Patient Care | All Right Reserved</p>
+                    <p class="footer-one__copy-text">Copyright © 1999 - 2020 GoDaddy Operating Company, LLC. All Rights Reserved.</p>
                     <ul class="footer-one__bottom-links">
                         <li class="footer-one__bottom-links-item"><a href="about.html">About Us</a></li>
                         <li class="footer-one__bottom-links-item"><a href="#services">Services</a></li>
@@ -317,6 +324,79 @@
     </div><!-- /.page-wrapper -->
     <a href="#" data-target="html" data-target-offset="0" class="scroll-to-target scroll-to-top"><i class="material-icons">keyboard_arrow_up</i></a>
     <!-- /.scroll-to-top -->
+    <script type="text/javascript">
+    let message = document.querySelectorAll(".message");    
+    function validateName() {
+        var name = document.getElementById('name').value;
+
+        if (!name.match(/^[a-zA-Z]{2,}(?: [a-zA-Z]+){0,2}$/)) { 
+            let name = document.getElementById('name');
+            name.setAttribute('class','error');
+            message[0].textContent = "Please enter your correct name";
+            return false;
+        }
+        else{
+            let name = document.getElementById('name');
+            name.setAttribute('class','success');
+            message[0].textContent = "";
+        }
+        return true;
+    }
+
+
+    function validatePhone() {
+        var phone = document.getElementById('phone').value;
+
+        if (!phone.match(/^[0]?[789]\d{9}$/)) {
+            let phone = document.getElementById('phone');
+            phone.setAttribute('class','error');
+            message[1].textContent = "Please enter a correct phone number";//Validation Message
+            return false;
+        }
+        else{
+            let phone = document.getElementById('phone');
+            phone.setAttribute('class','success');
+            message[1].textContent = "";
+        }
+
+        return true;
+
+    }
+
+    function validateEmail() {
+
+        var email = document.getElementById('email').value;
+
+        if (!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+            let email = document.getElementById('email');
+            email.setAttribute('class','error');
+            message[2].textContent = "Please enter a correct email address";
+            return false;
+        }
+        else{
+            let email = document.getElementById('email');
+            email.setAttribute('class','success');
+            message[2].textContent = "";
+        }
+
+        return true;
+
+    }
+
+
+    function validateForm() {
+        if (!validateName() || !validatePhone() || !validateEmail()) {
+             alert = document.querySelector(".form-message");
+            // alert("Form not submitted"); 
+            alert.textContent = "*Please fill in the form properly";
+            return false;
+        } else {
+            submitted = true;
+            alert.textContent = "";
+            return true;
+        }
+    }
+    </script>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/bootstrap-select.min.js"></script>

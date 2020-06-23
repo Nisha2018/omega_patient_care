@@ -1687,6 +1687,8 @@ hr.style-one {
     background-color: #fff;
     padding: 30px;
     border-radius: 0 0 10px 10px;
+    display: grid;
+    grid-row-gap: 6px;
 }
 
 .appointment-two__form-field {
@@ -8829,3 +8831,26 @@ hr.style-one {
     margin-top: 15px;
     margin-bottom: 20px;
 }
+
+.appointment-two__form-field input.success{
+    border: 2px solid limegreen;
+}
+
+.appointment-two__form-field input.error{
+    border: 2px solid crimson;
+}
+
+.message,.form-message{
+    font-size: 14px;
+    color: crimson;
+}
+
+.form-message{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+button:focus {
+    outline: none;
+    background-color: #20b6e9;
+}    
