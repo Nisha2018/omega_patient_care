@@ -6230,7 +6230,7 @@ hr.style-one {
     display: block;
     padding-bottom: 5px;
     padding-left: 5px;
-    margin-bottom: 60px;
+    margin-bottom: 22px;
 }
 
 .contact-one__form input::-webkit-input-placeholder,
@@ -8853,4 +8853,53 @@ hr.style-one {
 button:focus {
     outline: none;
     background-color: #20b6e9;
-}    
+}  
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.4);
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    z-index: 11;
+} 
+
+.overlay .popupText {
+    position: relative;
+    background: #fff;
+    color: #000;
+    max-width: 500px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 5px;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+} 
+
+.overlay .popupText p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: #0f4469;
+    margin-bottom: 15px;
+}
+
+.overlay .close {
+    position: absolute;
+    top: 0;
+    right: 12px;
+    justify-self: end;
+    font-size: 30px;
+    color: red;
+    font-weight: 700;
+    cursor: pointer;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+}
+
+.overlay .close a {
+    text-decoration: none;
+}

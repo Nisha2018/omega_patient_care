@@ -81,25 +81,25 @@
                         var submitted = false;
                         </script>
                         <!--Update the URL for thank you page on form submit -->
-                        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='http://localhost/omega_patient_care/index.html';}"></iframe>
-                        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSerqPrc9mY8eBBJPhxQzDXp1n5cSyMG9RyuLcQvML64sBlyYQ/formResponse" method="post" target="hidden_iframe" onsubmit="return validateForm();" class="appointment-two__form contact-from-validated">
+                        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='index.html';}"></iframe>
+                        <form id="enquiryForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSerqPrc9mY8eBBJPhxQzDXp1n5cSyMG9RyuLcQvML64sBlyYQ/formResponse" method="post" target="hidden_iframe" onsubmit="return validateForm();" class="appointment-two__form contact-from-validated">
                             <div class="appointment-two__form-top">
                                 <h3 class="appointment-two__form-title">Get an Appointment</h3>
                             </div>
                             <div class="appointment-two__form-bottom">
                                 <div class="form-message"></div>
                                 <div class="appointment-two__form-field">
-                                    <input type="text" name="entry.143189773" id="name" placeholder="Enter your name*" required="true">
+                                    <input type="text" name="entry.143189773" pattern="^[a-zA-Z]{2,}(?: [a-zA-Z]+){0,2}$" title="Please enter your correct name" id="name" placeholder="Enter your name*" required="true">
                                     <i class="appointment-two__form-field-icon material-icons">person</i>
                                 </div>
                                 <div class="message"></div>
                                 <div class="appointment-two__form-field">
-                                    <input type="text" id="phone" pattern="[0-9]{10}$" title="Please  enter a  10 digit number" name="entry.207768463" placeholder="Enter your mobile number*" required="true">
+                                    <input type="tel" id="phone" pattern="^[0]?[789]\d{9}$" title="Please enter a correct phone number" name="entry.207768463" placeholder="Enter your mobile number*" required="true">
                                     <i class="appointment-two__form-field-icon material-icons">phone</i>
                                 </div>
                                 <div class="message"></div>
                                 <div class="appointment-two__form-field">
-                                    <input type="email" id="email" name="entry.1668228412" placeholder="Enter your Email*" required="true">
+                                    <input type="email" pattern="^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$" title="Please enter a correct email address" id="email" name="entry.1668228412" placeholder="Enter your Email*" required="true">
                                     <i class="appointment-two__form-field-icon material-icons">mail</i>
                                 </div>
                                 <div class="message"></div>
@@ -119,6 +119,14 @@
                         </form><!-- /.appointment-two__form -->
                     </div><!-- /.col-lg-5 -->
                 </div><!-- /.row -->
+                <div class="overlay" id="form-message" style="display: none;">
+                    <div class="popupText">
+                        <p class="">Thank you for contacting us. <br> Your inquiry has been sent successfully.<br> Our customer service representative will contact you within 24 hours. </p>
+                        <div class="close">
+                            <a class="close" onclick="popupclose()">×</a>
+                        </div>
+                    </div>
+                </div>
             </div><!-- /.container -->
         </section><!-- /.static-banner-two -->
         <section class="about-one dental-feature">
@@ -325,74 +333,77 @@
     <a href="#" data-target="html" data-target-offset="0" class="scroll-to-target scroll-to-top"><i class="material-icons">keyboard_arrow_up</i></a>
     <!-- /.scroll-to-top -->
     <script type="text/javascript">
-    let message = document.querySelectorAll(".message");    
-    function validateName() {
-        var name = document.getElementById('name').value;
-
-        if (!name.match(/^[a-zA-Z]{2,}(?: [a-zA-Z]+){0,2}$/)) { 
-            let name = document.getElementById('name');
-            name.setAttribute('class','error');
-            message[0].textContent = "Please enter your correct name";
-            return false;
-        }
-        else{
-            let name = document.getElementById('name');
-            name.setAttribute('class','success');
-            message[0].textContent = "";
-        }
-        return true;
+    function popupclose() {
+        let element = document.getElementById('form-message');
+        element.style.display = 'none';
     }
 
+    // let message = document.querySelectorAll(".message");
 
-    function validatePhone() {
-        var phone = document.getElementById('phone').value;
+    // function validateName() {
+    //     var name = document.getElementById('name').value;
 
-        if (!phone.match(/^[0]?[789]\d{9}$/)) {
-            let phone = document.getElementById('phone');
-            phone.setAttribute('class','error');
-            message[1].textContent = "Please enter a correct phone number";//Validation Message
-            return false;
-        }
-        else{
-            let phone = document.getElementById('phone');
-            phone.setAttribute('class','success');
-            message[1].textContent = "";
-        }
-
-        return true;
-
-    }
-
-    function validateEmail() {
-
-        var email = document.getElementById('email').value;
-
-        if (!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
-            let email = document.getElementById('email');
-            email.setAttribute('class','error');
-            message[2].textContent = "Please enter a correct email address";
-            return false;
-        }
-        else{
-            let email = document.getElementById('email');
-            email.setAttribute('class','success');
-            message[2].textContent = "";
-        }
-
-        return true;
-
-    }
+    //     if (!name.match(/^[a-zA-Z]{2,}(?: [a-zA-Z]+){0,2}$/)) {
+    //         let name = document.getElementById('name');
+    //         name.setAttribute('class', 'error');
+    //         message[0].textContent = "Please enter your correct name";
+    //         return false;
+    //     } else {
+    //         let name = document.getElementById('name');
+    //         name.setAttribute('class', 'success');
+    //         message[0].textContent = "";
+    //     }
+    //     return true;
+    // }
 
 
+    // function validatePhone() {
+    //     var phone = document.getElementById('phone').value;
+
+    //     if (!phone.match(/^[0]?[789]\d{9}$/)) {
+    //         let phone = document.getElementById('phone');
+    //         phone.setAttribute('class', 'error');
+    //         message[1].textContent = "Please enter a correct phone number"; //Validation Message
+    //         return false;
+    //     } else {
+    //         let phone = document.getElementById('phone');
+    //         phone.setAttribute('class', 'success');
+    //         message[1].textContent = "";
+    //     }
+
+    //     return true;
+
+    // }
+
+    // function validateEmail() {
+
+    //     var email = document.getElementById('email').value;
+
+    //     if (!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+    //         let email = document.getElementById('email');
+    //         email.setAttribute('class', 'error');
+    //         message[2].textContent = "Please enter a correct email address";
+    //         return false;
+    //     } else {
+    //         let email = document.getElementById('email');
+    //         email.setAttribute('class', 'success');
+    //         message[2].textContent = "";
+    //     }
+
+    //     return true;
+
+    // }
+
+    var myVar;
     function validateForm() {
-        if (!validateName() || !validatePhone() || !validateEmail()) {
-             alert = document.querySelector(".form-message");
-            // alert("Form not submitted"); 
-            alert.textContent = "*Please fill in the form properly";
-            return false;
-        } else {
+        let form = document.getElementById('enquiryForm');
+        let message = document.getElementById('form-message');
+        message.style.display = 'grid';
+        myVar = setTimeout(submit, 5000);
+
+        function submit() {
             submitted = true;
-            alert.textContent = "Thank You! Your request has been sent successfully.";
+            form.reset();
             return true;
         }
     }

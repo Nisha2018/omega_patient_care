@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -79,11 +80,18 @@
             <div class="container">
                 <div class="row justify-content-between no-gutters">
                     <div class="col-lg-5">
+                        <script type="text/javascript">
+                        var submitted = false;
+                        </script>
+                        <!--Update the URL for thank you page on form submit -->
+                        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='index.html';}"></iframe>
                         <h3 class="contact-one__title">Get in Touch</h3><!-- /.contact-one__title -->
-                        <form action="" class="contact-one__form contact-form-validated">
-                            <input type="text" name="name" placeholder="Full Name">
-                            <input type="text" name="email" placeholder="Email Address">
-                            <textarea placeholder="Your Messege" name="message"></textarea>
+                        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeut6J6ePk2QwoeIwX1fZ4XU0VSNpZYfzA3wu49TFlpnzRBUg/formResponse" method="post" target="hidden_iframe" onsubmit="return sendForm();" class="contact-one__form contact-form-validated" id="contactForm">
+                            <input type="text" id="name" name="entry.1217374897" pattern="^[a-zA-Z]{2,}(?: [a-zA-Z]+){0,2}$" title="Please enter your correct name" placeholder="Full Name*" required>
+                            <input type="email" id="email" name="entry.1682641049" pattern="^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$" title="Please enter a correct email address" placeholder="Email*" required>
+                            <input type="tel" id="phone" name="entry.1389415509" pattern="^[0]?[789]\d{9}$" title="Please enter a correct phone number" placeholder="Phone*" required>
+                            <input type="text" id="subject" name="entry.1813165800" placeholder="Subject*" required>
+                            <textarea id="message" placeholder="Your Message*" name="entry.722276056" required></textarea>
                             <button type="submit" class="thm-btn contact-one__btn">Send</button>
                         </form><!-- /.contact-one__form -->
                     </div><!-- /.col-lg-5 -->
@@ -97,10 +105,17 @@
                             <p class="contact-one__info__text"><span>Branch Office:</span> <br>Nav Chetna Society, Near Praveen Tent House Khora Colony, (Noida) Ghaziabad</p>
                             <p class="contact-one__info__text"><span>Contact us:</span> <br>+91 9711432859, +91 8383942514</p><!-- /.contact-one__info__text -->
                             <!-- /.contact-one__info__text -->
-                           
                         </div><!-- /.contact-one__info -->
                     </div><!-- /.col-lg-4 -->
-                </div><!-- /.row justify-content-end -->
+                </div>
+                <div class="overlay" id="form-message" style="display: none;">
+                    <div class="popupText">
+                        <p class="">Thank you for contacting us. <br> Your inquiry has been sent successfully.<br> Our customer service representative will contact you within 24 hours. </p>
+                        <div class="close">
+                            <a class="close" onclick="popupclose()">×</a>
+                        </div>
+                    </div>
+                </div>
             </div><!-- /.container -->
         </section><!-- /.contact-one -->
         <div class="contact-page-map-wrapper">
@@ -111,7 +126,7 @@
             </div>
             <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.56082561151!2d77.08135031438952!3d28.612949125157453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04b435ab583b%3A0x554a36119d768b8e!2sADA%20The%20Fashionable%20Tailors%20%26%20Drappers!5e0!3m2!1sen!2sin!4v1592253057499!5m2!1sen!2sin" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
         </div><!-- /.contact-page-map-wrapper -->
-       <footer class="footer-one">
+        <footer class="footer-one">
             <div class="footer-one__bottom">
                 <div class="container">
                     <p class="footer-one__copy-text">Copyright ©2020 GoDaddy Operating Company, LLC. All Rights Reserved.</p>
@@ -126,6 +141,28 @@
     </div><!-- /.page-wrapper -->
     <a href="#" data-target="html" data-target-offset="0" class="scroll-to-target scroll-to-top"><i class="material-icons">keyboard_arrow_up</i></a>
     <!-- /.scroll-to-top -->
+
+    <script>
+    function popupclose() {
+        let element = document.getElementById('form-message');
+        element.style.display = 'none';
+    }
+
+    var myVar; 
+    function sendForm() {
+        let form = document.getElementById('contactForm');
+        let message = document.getElementById('form-message');
+        // form.style.display = 'none';
+        message.style.display = 'grid';
+        myVar = setTimeout(submit, 5000);
+
+        function submit() {
+            submitted = true;
+            form.reset();
+            return true;
+        }
+    }
+    </script>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/bootstrap-select.min.js"></script>
@@ -138,4 +175,5 @@
     <script src="js/gmaps.js"></script>
     <script src="js/map-helper.js"></script>
 </body>
+
 </html>
