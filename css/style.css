@@ -8903,3 +8903,7 @@ button:focus {
 .overlay .close a {
     text-decoration: none;
 }
+
+.main-navigation ul li a i{
+    vertical-align: bottom;
+}

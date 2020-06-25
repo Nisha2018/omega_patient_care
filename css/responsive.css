@@ -562,6 +562,10 @@
         max-width: 100%;
     }
 
+    .topbar-three {
+        display: none;
+    }
+
     .feature-one .custom-col-61 {
         -webkit-box-flex: 0;
         flex: 0 0 100%;
@@ -783,15 +787,15 @@
         float: right;
         left: 110px;
     }
+
+    .main-navigation ul li.p-bottom{
+        display: none;
+    }
 }
 
 @media(max-width: 767px) {
     .topbar-one .container {
         flex-direction: column;
-    }
-
-    .topbar-three {
-        display: none;
     }
 
     .clients-row {
