@@ -34,7 +34,7 @@
     .dental-feature,
     .feature-four,
     .team-two {
-        padding: 80px 0;
+        padding: 80px 15px;
     }
 
     .service-one {
@@ -44,6 +44,7 @@
 
     .service-one__single {
         display: grid;
+        padding: 0 10px;
     }
 
     .service-one__icon {
@@ -788,8 +789,14 @@
         left: 110px;
     }
 
-    .main-navigation ul li.p-bottom{
+    .main-navigation ul li.p-bottom {
         display: none;
+    }
+
+    .covid19 .covid-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 40px;
     }
 }
 
@@ -800,6 +807,11 @@
 
     .clients-row {
         grid-template-columns: 1fr;
+        padding: 0 40px;
+    }
+
+    .covid19 .img-container img:hover {
+        transform: none;
     }
 
     .topbar-one__contact-item:not(:last-child):after {
@@ -877,6 +889,8 @@
 @media(max-width: 575px) {
     .service-one__single {
         margin-bottom: 50px;
+        padding: 30px;
+        box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.08);
     }
 
     .video-one {
@@ -1220,5 +1234,16 @@
     .feature-five__content {
         padding-left: 0;
         padding-top: 20px;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 1199px) {
+    .covid19.service-one {
+        padding-bottom: 80px;
+    }
+
+    .clients-row {
+        grid-column-gap: 15px;
+        padding: 0;
     }
 }
