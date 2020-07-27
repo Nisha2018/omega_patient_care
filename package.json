@@ -1,0 +1,30 @@
+{
+  "name": "omega_patient_care",
+  "version": "1.0.0",
+  "description": "Health care services at home",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nisha2018/omega_patient_care.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nisha2018/omega_patient_care/issues"
+  },
+  "homepage": "https://github.com/Nisha2018/omega_patient_care#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.8.5",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-terser": "^1.2.1"
+  }
+}
