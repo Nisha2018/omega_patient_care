@@ -15,6 +15,10 @@ function copyHtml() {
 	return src('src/*.html').pipe(gulp.dest('dist')); //copies all html files into dist folder
 } 
 
+// function copy() {
+// 	return src('src/fonts/*').pipe(gulp.dest('dist/assets/fonts')); //copies all files
+// } 
+
 function imgTask() {
 	return src('src/images/**/*').pipe(imagemin()).pipe(gulp.dest('dist/images')); //optimizes all the images at once
 }  
@@ -22,7 +26,7 @@ function imgTask() {
 function jsTask() {
 	return src(jsPath)
 	  .pipe(sourcemaps.init())     //initialized the sourcemaps
-	  .pipe(concat('all.js'))      //concatenates all the js files
+	  // .pipe(concat('all.js'))      //concatenates all the js files
 	  .pipe(terser())              //minifies the js files
 	  .pipe(sourcemaps.write('.'))
 	  .pipe(dest('dist/assets/js'));
@@ -31,7 +35,7 @@ function jsTask() {
 function cssTask() {
 	return src(cssPath)
 	  .pipe(sourcemaps.init())    
-	  .pipe(concat('style.css')) //concatenates all css files into one single css file    
+	  // .pipe(concat('style.css'))   //concatenates all css files into one single css file    
 	  // .pipe(postcss([autoprefixer(),cssnano()])) 
 	  .pipe(cleanCSS())          
 	  .pipe(sourcemaps.write('.'))
@@ -42,6 +46,8 @@ function watchTask() {
 	watch([cssPath, jsPath], {interval: 1000},parallel(cssTask, jsTask));
 }
 
+
+// exports.copy = copy;
 exports.cssTask = cssTask;
 exports.jsTask = jsTask;
 exports.imgTask = imgTask;

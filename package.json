@@ -25,6 +25,8 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-postcss": "^8.0.0",
     "gulp-sourcemaps": "^2.6.5",
-    "gulp-terser": "^1.2.1"
+    "gulp-terser": "^1.2.1",
+    "gulp-uglify": "^3.0.2",
+    "gulp-uglify-es": "^2.0.0"
   }
 }
