@@ -11,6 +11,7 @@
     <link rel="manifest" href="images/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
@@ -24,7 +25,7 @@
                     <p class="topbar-three__text">Welcome to <span>Omega </span> Patient Care</p>
                 </div><!-- /.topbar-three__left -->
                 <div class="topbar-three__right">
-                    <a href="mailto:support@omegapatientcare.com" class="topbar-three__link"><i class="material-icons">email</i>support@omegapatientcare.com</a>
+                    <a href="mailto:omegapatientcare@gmail.com" class="topbar-three__link"><i class="material-icons">email</i>omegapatientcare@gmail.com</a>
                     <a href="tel:+91 9711432859" class="topbar-three__link"><i class="material-icons">local_phone</i>+91 9711432859</a>
                 </div><!-- /.topbar-three__right -->
             </div><!-- /.container -->
@@ -60,7 +61,7 @@
                                 </ul>
                             </li>
                             <li><a href="contact.html">Contact Us</a></li>
-                            <li class="p-bottom"><a href="mailto:support@omegapatientcare.com"><i class="material-icons">email</i>support@omegapatientcare.com</a></li>
+                            <li class="p-bottom"><a href="mailto:omegapatientcare@gmail.com"><i class="material-icons">email</i>omegapatientcare@gmail.com</a></li>
                             <li class="p-bottom"><a href="tel:+91 9711432859"><i class="material-icons">local_phone</i>+91 9711432859</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
@@ -323,7 +324,7 @@
             <div class="container">
                 <div class="block-title text-center">
                     <h2 class="block-title__title">Covid 19 - Health and Safety Tips</h2><!-- /.block-title__title -->
-                    <p class="block-title__text">Please follow all the health and safety measures advised, For more information, Please visit <a class="link" href="https://www.who.int/">World Health Organisation</a></p><!-- /.block-title__text -->
+                    <p class="block-title__text">Please follow all the health and safety measures advised, For more information, Please visit <a class="link" href="https://www.who.int/" target="_blank">World Health Organisation</a></p><!-- /.block-title__text -->
                 </div><!-- /.block-title -->
                 <div class="row services-row covid-row">
                     <div class="covid-col">
@@ -347,12 +348,22 @@
         <footer class="footer-one">
             <div class="footer-one__bottom">
                 <div class="container">
-                    <p class="footer-one__copy-text">Copyright ©2020 GoDaddy Operating Company, LLC. All Rights Reserved.</p>
-                    <ul class="footer-one__bottom-links">
-                        <li class="footer-one__bottom-links-item"><a href="about.html">About Us</a></li>
-                        <li class="footer-one__bottom-links-item"><a href="#services">Services</a></li>
-                        <li class="footer-one__bottom-links-item"><a href="contact.html">Contact</a></li>
-                    </ul>
+                    <div class="footer-wrap">
+                        <p class="footer-one__copy-text">Copyright ©2020 GoDaddy Operating Company, LLC. All Rights Reserved.</p>
+                        <ul class="footer-one__bottom-links">
+                            <li class="footer-one__bottom-links-item"><a href="about.html">About Us</a></li>
+                            <li class="footer-one__bottom-links-item"><a href="#services">Services</a></li>
+                            <li class="footer-one__bottom-links-item"><a href="contact.html">Contact</a></li>
+                        </ul>
+                        <div class="social-icons">
+                            <div class="social-icon">
+                                <a href="https://www.facebook.com/Omegapatientcare" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            </div>
+                            <div class="social-icon">
+                                <a href="https://www.instagram.com/omegapatientcare/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div><!-- /.container -->
             </div><!-- /.footer-one__bottom -->
         </footer><!-- /.footer-one -->
@@ -366,6 +377,7 @@
     }
 
     var myVar;
+
     function validateForm() {
         let form = document.getElementById('enquiryForm');
         let message = document.getElementById('form-message');

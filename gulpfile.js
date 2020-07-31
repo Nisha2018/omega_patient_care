@@ -8,8 +8,8 @@ const sourcemaps = require('gulp-sourcemaps');
 // const cssnano = require('cssnano');
 const cleanCSS = require('gulp-clean-css');
 const { src, series, parallel, dest, watch } = require('gulp');
-const jsPath = 'src/js/*.js';
-const cssPath = 'src/css/*.css';
+const jsPath = 'src/assets/js/*.js';
+const cssPath = 'src/assets/css/*.css';
 
 function copyHtml() {
 	return src('src/*.html').pipe(gulp.dest('dist')); //copies all html files into dist folder
